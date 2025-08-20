@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.play-area {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border: 2px solid #000;
+    position: relative;
+    margin: 0 auto;
+}
+
+.snake {
+    width: 10px;
+    height: 10px;
+    background-color: #28a745;
+    position: absolute;
+	border-radius: 50%; /*This makes the body segments circular*/
+}
+
+.snake-head{
+	background-color: #218838;
+	position: relative;
+}
+
+.snake-head::before, .snake-head::after{
+	content: '';
+	width: 2px;
+	height: 2px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+}
+
+.snake-head::before{
+	left:2px;
+}
+
+.snake-head::after{
+    right:2px;
+}
+
+.snake-tail{
+	background-color: #28a745;
+}
+.food {
+    width: 10px;
+    height: 10px;
+    background-color: #dc3545;
+    position: absolute;
+	border-radius: 50%;
+}
+
+.ordinary-food{
+	width: 10px;
+	height: 10px;
+	background-color: #dc3545;
+}
+
+.obstacle {
+    position: absolute;
+    background: repeating-linear-gradient(135deg, #444 0 5px, #888 5px 10px);
+    border: 2px solid #222;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.special-food{
+	width: 20px;
+	height: 20px;
+	background-color: #ffc107;
+    border: 2px solid #ff9800;
+    box-shadow: 0 0 8px 2px #ff9800;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}

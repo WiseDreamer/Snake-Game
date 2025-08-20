@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="game-container">
+    <h1>Snake Game</h1>
+    <div class="score-board">
+        <span id="score">Score: 0</span>
+        <span id="high-score">High Score: 0</span>
+    </div>
+    <div class="play-area" id="play-area"></div>
+    <div id="special-food-timer" class="timer" style="display: none;"></div> <!-- Timer div added here -->
+    <div class="controls">
+        <button class="control-btn" data-direction="up">↑</button>
+        <button class="control-btn" data-direction="left">←</button>
+        <button class="control-btn" data-direction="down">↓</button>
+        <button class="control-btn" data-direction="right">→</button>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
